@@ -1,0 +1,36 @@
+@baseUrl = http://localhost:3333
+
+POST {{baseUrl}}/events
+Content-Type: application/json
+
+{
+    "title": "Novo evento",
+    "details": null,
+    "maximumAttendees": 1
+}
+
+###
+
+POST {{baseUrl}}/events/89515e12-93dd-40b2-ab20-5aecb4b475e9/attendees
+Content-Type: application/json
+
+{
+    "name": "klevisson",
+    "email": "klevisson@gmail.com"
+}
+
+###
+
+GET {{baseUrl}}/events/89515e12-93dd-40b2-ab20-5aecb4b475e9
+
+###
+
+GET {{baseUrl}}/attendees/2/badge
+
+###
+
+GET {{baseUrl}}/attendees/1/check-in
+
+###
+
+GET {{baseUrl}}/events/89515e12-93dd-40b2-ab20-5aecb4b475e9/attendees
